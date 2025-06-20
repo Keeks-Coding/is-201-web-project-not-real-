@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Seal Image Generator</title>
+  <style>
+    body {
+    font-family: 'Salsa', cursive;
+    background-image: url("seals/blueaura.jpg");
+    background-size: cover;          
+    background-repeat: no-repeat;    
+    background-attachment: fixed;
+    color: #165256;
+    text-align: center;
+    padding: 2rem;
+    }
+
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    button {
+      background-color: #f3f0d3;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ddd280;
+    }
+
+    .seal-box {
+      margin-top: 2rem;
+    }
+
+    .seal-img {
+      max-width: 400px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <h1>🐾Seal Surprise!🐾</h1>
+  <p>Click the button to see a random adorable seal</p>
+  <button onclick="showSeal()">Show Me a Seal!</button>
+
+  <div class="seal-box">
+    <img id="sealImage" src="" alt="Cute seal will appear here" class="seal-img" />
+  </div>
+
+  <script>
+    const sealImages = [
+        "seals/seal2.JPG",
+        "seals/seal3.JPG",
+        "seals/seal4.JPG",
+        "seals/seal5.JPG",
+        "seals/seal6.JPG",
+        "seals/seal7.JPG",
+        "seals/seal8.JPG",
+        "seals/seal9.JPG",
+        "seals/seal10.JPG",
+        "seals/seal11.JPG",
+        "seals/seal12.JPG",
+        "seals/seal13.JPG",
+        "seals/seal14.JPG",
+        "seals/seal15.JPG",
+        "seals/seal16.JPG",
+        "seals/seal17.JPG",
+        "seals/seal18.JPG",
+        "seals/seal19.JPG",
+        "seals/seal20.JPG",
+        "seals/seal21.JPG",
+        "seals/seal22.JPG",
+        "seals/seal23.JPG",
+        "seals/seal24.JPG",
+        "seals/seal25.JPG",
+        "seals/seal26.JPG",
+        "seals/seal27.JPG",
+        "seals/seal28.JPG",
+        "seals/seal29.JPG",
+        "seals/seal1.JPG"
+        
+];
+
+
+    function showSeal() {
+      const randomIndex = Math.floor(Math.random() * sealImages.length);
+      const sealImage = document.getElementById("sealImage");
+      sealImage.src = sealImages[randomIndex];
+    }
+  </script>
+</body>
+</html>
